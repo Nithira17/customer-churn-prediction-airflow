@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.log
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+.history/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data artifacts and outputs
+artifacts/
+data/
+*.csv
+*.parquet
+
+# MLflow
+mlruns/
+mlruns.db
+
+# Environment
+.env
+.venv/
+env/
+venv/
+*.env
+
+# PySpark
+.metastore_db/
+derby.log
+
+# Airflow
+airflow.cfg
+airflow.db
+logs/
+unittest.cfg
+
+# Misc
+*.bak
+*.swp
+*.tmp
+*.old
