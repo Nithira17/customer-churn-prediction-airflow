@@ -64,10 +64,10 @@ clean:
 	@if exist mlruns rmdir /s /q mlruns
 	@echo Cleanup completed!
 
-# Run data pipeline
+# Run data pipeline with PySpark environment variables
 data-pipeline: setup-dirs
 	@echo Start running data pipeline...
-	$(VENV) && $(PYTHON) pipelines\data_pipeline.py
+	.venv\Scripts\activate.bat && set PYSPARK_PYTHON=.venv\Scripts\python.exe && set PYSPARK_DRIVER_PYTHON=.venv\Scripts\python.exe && python pipelines\data_pipeline.py
 	@echo Data pipeline completed successfully!
 
 # Force rebuild for data pipeline

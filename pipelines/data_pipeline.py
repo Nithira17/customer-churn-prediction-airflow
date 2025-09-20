@@ -16,6 +16,15 @@ from pyspark.sql import DataFrame, SparkSession
 from pyspark.sql import functions as F
 from pyspark.ml import Pipeline, PipelineModel
 
+# Set comprehensive PySpark environment
+os.environ['PYSPARK_PYTHON'] = os.path.join(os.getcwd(), '.venv', 'Scripts', 'python.exe')
+os.environ['PYSPARK_DRIVER_PYTHON'] = os.path.join(os.getcwd(), '.venv', 'Scripts', 'python.exe')
+os.environ['SPARK_LOCAL_IP'] = '127.0.0.1'
+
+# Add fault handler for better debugging
+os.environ['spark.sql.execution.pyspark.udf.faulthandler.enabled'] = 'true'
+os.environ['spark.python.worker.faulthandler.enabled'] = 'true'
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
